@@ -1,0 +1,756 @@
+/* Basic Reset */
+.padding-head{
+  padding: 3%
+}
+
+.padding-body{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  flex-grow: 1;
+  padding-left: 4.5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.logo img {
+  width: 500px;
+  height: auto;
+
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  padding-top: 15%;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #152245;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0077cc;
+}
+
+
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits color from parent element */
+}
+
+a:visited, a:hover, a:focus, a:active {
+  color: inherit; /* Ensures color stays consistent across states */
+  text-decoration: none; /* Ensures no underline on hover/focus/active */
+}
+
+.full-screen-image {
+  width: 100%; /* Full viewport width */
+  height: auto; /* Full viewport height */
+  object-fit: cover; /* Ensures the image fills the area while maintaining aspect ratio */
+}
+
+body {
+  font-family: "Montserrat", serif;
+  color: #152245;
+  text-align: center;
+}
+
+
+
+.navbar, .right-nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.navbar a, .right-nav a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 1em;
+}
+
+.right-nav .search i {
+  margin-left: 5px;
+}
+
+.dm-serif-display-regular {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.montserrat{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+ /* Basic styling for the footer */
+ .footer {
+  background-color: #152245;
+  color: #fff;
+  text-align: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+
+/* The side navigation menu */
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  background-color: none;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 1050; /* Higher than any other element */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.sidebar .soc{
+  color: #152245;
+  margin-bottom: 20px;
+}
+
+.navbar.sticky-top {
+  z-index: 1000; /* Lower than sidebar */
+}
+
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row
+  }
+  .sidebar .soc{
+    color: #152245;
+    margin-right: 20px;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/* Remove default Bootstrap navbar border */
+.navbar_new {
+  background-color: #fff;
+  border: none;
+  box-shadow: none;
+  position: sticky;
+  justify-content: center;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Ensure it takes full width */
+  padding: 0.5rem 1rem;
+}
+
+/* Add horizontal lines using ::before and ::after pseudo-elements */
+.navbar_new::before,
+.navbar_new::after {
+  content: "";
+  display: block;
+  height: 0.7px;
+  background-color: #152245; /* Line color */
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Position top line */
+.navbar_new::before {
+  top: 0;
+}
+
+/* Position bottom line */
+.navbar_new::after {
+  bottom: 0;
+}
+
+.bg-body-tertiary{
+  background-color: white;
+}
+
+.navbar-nav {
+  float:none;
+  margin:0 auto;
+  display: block;
+  text-align: center;
+}
+
+.navbar-nav > li {
+  display: inline-block;
+  float:none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar_new .nav-item {
+  margin-left: 2rem; /* Space between items */
+}
+
+.navbar-brand{
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#intro{
+  margin: 3%;
+}
+
+h2{
+  font-family: "DM Serif Display", serif;
+  font-size: 50px;
+  font-style: normal;
+}
+
+h3{
+  font-family: "DM Serif Display", serif;
+  font-size: 30px;
+  font-style: normal;
+}
+
+p{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+
+.hover-image {
+  border-radius: 100%;
+  margin-bottom: 6%;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.01s ease;
+}
+
+.hover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.hover-image:hover {
+  animation: shake 2s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-10deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  45% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+}
+
+#newsletter{
+  background-color: #f2a365;
+  color: #152245;
+  padding: 3%;
+  margin-top: 2%;
+  margin-bottom: 0%;
+  width: 100%;
+}
+
+#welcome{
+  padding: 2% 15%;
+}
+
+.container-welcome{
+  display: flex; /* Enable flexbox */
+    justify-content: space-between; /* Optionally add space between the two sections */
+    gap: 20px; /* Space between the columns */
+}
+
+.left, .right {
+  flex: 1; /* Make each section take up equal space */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .container-welcome {
+    flex-direction: column; /* Stack sections vertically */
+  }
+}
+
+.accordion-item {
+  border-left: none;
+  border-right: none;
+  border-color: #f2a365;
+  box-shadow: none;
+  margin-left: 3%;
+}
+
+.accordion-header{
+  font-family: "DM Serif Display", serif;
+  font-weight: normal;
+  font-size: larger;
+}
+
+.accordion-button {
+  font-size: 1.5rem !important;  /* Set font size */
+  font-weight: light !important;  /* Set font weight */
+  color: #333 !important;        /* Text color */
+}
+
+.image-section {
+  height: 100vh; /* Full viewport height */
+  background-image: url('https://www.louisvillephotoorganizer.com/wp-content/uploads/2021/03/Amybhhero-mint.jpg'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  display: flex;
+  color: white;
+}
+
+#ready{
+  font-family: "Montserrat", serif;
+  font-size: 30px;
+  justify-content: left;
+  color: #152245;
+}
+
+.btn-outline-dark {
+  color: #152245; /* Text color */
+  border-color: #152245; /* Border color */
+  font-size: 25px;
+}
+
+.btn-outline-dark:hover {
+  background-color: #152245; /* Background color on hover */
+  color: white; /* Text color on hover */
+}
+
+#testimonials{
+  background-color: white;
+  color: #152245;
+}
+
+#press{
+  background-color: #f2a365;
+  padding: 3%;
+}
+
+#carousel{
+  font-family: "Montserrat", serif;
+}
+
+.carousel-content{
+  width: 100%; 
+  height: 500px; 
+  text-align: center;
+}
+
+.carousel-inside{
+  background-color: peachpuff;
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+.press-logo{
+  margin: 1%;
+}
+
+.container-footer{
+  display: flex;
+  width: 100%;  /* Ensures full width of the parent container */
+}
+
+.left-footer{
+  display: flex;
+  flex-direction: row;
+  width: 50%;  /* Left half takes 50% of the container */
+}
+
+.left-item {
+  flex: 1;  /* Each left item takes equal space */
+  padding: 10px;
+  margin: 5px;
+  text-align: left;
+  line-height: 3rem;
+}
+
+.right-footer{
+  width: 50%;  /* Right half takes 50% of the container */
+  padding: 10px;
+  text-align: left;
+}
+
+.form-control {
+  border-radius: 0px; /* Rounded corners */
+  padding: 10px; /* Padding inside the input */
+  border-left: none;
+  border-right: none;
+  border-top: none; 
+  background-color: #152245;
+  color: white;
+}
+
+
+.form-control::placeholder {
+  color: white; /* Grey color for placeholder text */
+  opacity: 1; /* Ensure the placeholder is fully opaque */
+}
+
+.form-control:focus {
+  border-color: none; /* Keep the same border color when focused */
+  box-shadow: none; /* Remove shadow on focus */
+  background-color: #152245; /* Keep the same background on focus */
+  color: white;
+}
+
+.subscribe-button {
+  background-color: #152245;
+  color: white;
+  border-color: white; /* Optional: remove border for a cleaner look */
+  border-radius: 0;
+  margin-top: 3%;
+}
+
+.subscribe-button:hover {
+  background-color: white;
+  color: #152245;
+  border: 1px solid #152245; /* Optional: adds a border to maintain button shape on hover */
+}
+
+/* Testimonials */
+
+.h1-testimonials{
+  font-family: "DM Serif Display", serif;
+  font-size: 70px;
+  color: #152245;
+  padding: 3%;
+}
+
+.h2-testimonials{
+  font-family: 'Montserrat', serif;
+  color: #152245;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 200;
+  padding-bottom: 4%;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  max-width: 100%;
+  padding-bottom: 3%;
+}
+
+.testimonial-column {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  width: 500px; /* Adjust the width of each column as needed */
+}
+
+.testimonial-box {
+  padding: 13%;
+  border: 1px solid #ccc;
+  background-color: #f2a365;
+  text-align: left;
+  color: #152245;
+}
+
+.review-button {
+  background-color: white;
+  color: #f2a365;
+  border-color: #f2a365; /* Optional: remove border for a cleaner look */
+  border-radius: 0;
+  margin: 3%;
+  padding: 2%;
+  margin-bottom: 6%;
+}
+
+.review-button:hover {
+  background-color: #f2a365;
+  color: #152245;
+  border: 1px solid #f2a365; /* Optional: adds a border to maintain button shape on hover */
+}
+
+/* Meet Amy */
+.h1-meetamy{
+  font-family: "DM Serif Display", serif;
+  font-size: 70px;
+  color: #152245;
+  padding: 3%;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 100%;
+  padding-bottom: 3%;
+}
+
+.about-section-column {
+  display: flex;
+  flex-direction: column;
+  width: 600px; /* Adjust the width of each column as needed */
+  text-align: left;
+  font-size: 18.8px;
+}
+
+#family-photo{
+  padding: 3%;
+  width: 60%;
+}
+
+/* Photo Organisation */
+.photo-organisation{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 100%;
+  padding-bottom: 3%;
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  width: 600px; /* Adjust the width of each column as needed */
+  text-align: left;
+  font-size: 15px;
+  justify-content: center;
+}
+
+.right-side{
+  display: flex;
+  flex-direction: column;
+  width: 600px; /* Adjust the width of each column as needed */
+  text-align: left;
+  font-size: 15px;
+  justify-content: center;
+}
+
+.h3-organisation{
+  font-family: "Montserrat", serif;
+  font-size: 50px;
+  font-weight: lighter;
+  padding-bottom: 3%;
+}
+
+/* Why Choose */
+.city-box{
+  padding: 0%;
+  position: relative
+}
+
+
+.text-box {
+  position: absolute; /* Position the text relative to the container */
+  top: 50%; /* Push the text 50% down the container */
+  left: 50%; /* Push the text 50% right across the container */
+  transform: translate(-50%, -50%); /* Center the text vertically and horizontally */
+  color: #f2a365; /* Adjust text color */
+  background-color: white; 
+  border: 3px solid;
+  border-color: #f2a365;
+  padding: 3%; /* Add some spacing inside the text box */
+  text-align: center; /* Centers text inside the box */
+  font-size: 22px; /* Adjust text size */
+}
+
+/* Portfolio */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 5%;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Style for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+  z-index: 1500;
+}
+
+/* Modal content is set to fill the window */
+.modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image will scale with aspect ratio preserved, and will take the full window */
+.modal-content img {
+  width: 80%;
+  height: 100%;
+  object-fit: contain; /* Ensures aspect ratio is preserved while fitting the screen */
+}
+
+/* Prev/Next buttons for image navigation */
+.modal-content .prev, .modal-content .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal-content .prev {
+  left: 10px;
+}
+
+.modal-content .next {
+  right: 10px;
+}
+
+/* Close button for the modal */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: black;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2000; /* Ensure it stays above all other content */
+}
+
+/*Shop*/
+.shop{
+  padding: 10%;
+  padding-top: 0;
+}
+
+.shop-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 3%;
+}
+
+.shop-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  justify-content: center;
+  text-align: left;
+}
+
+.shop-box {
+  padding: 13%;
+  
+  color: #152245;
+}
+
+/*Privacy Policy*/
+.privacy-policy{
+  padding: 7%;
+  padding-top: 0;
+  text-align: left;
+}
+
+#pricing{
+  padding: 3% 7%
+}
+
+#cta{
+  padding: 3%;
+}
+
